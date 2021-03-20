@@ -1,0 +1,9 @@
+CREATE DATABASE DataEngineering;
+
+CREATE LOGIN arjan WITH PASSWORD = '#Sql123!';
+
+USE DataEngineering;
+
+CREATE USER arjan FOR LOGIN arjan;
+
+GRANT ALL PRIVILEGES TO arjan WITH GRANT OPTION;
