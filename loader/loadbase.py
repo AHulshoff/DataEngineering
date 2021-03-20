@@ -1,7 +1,7 @@
-class LoadBase(object):
+from abc import ABC, abstractmethod
 
-    def __init__(self) -> None:
-        super().__init__()
+class LoadBase(ABC):
 
+    @abstractmethod
     def run(self):
-        pass
+        raise NotImplementedError

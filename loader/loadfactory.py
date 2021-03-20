@@ -27,6 +27,6 @@ class LoadFactory(type):
         else:
             importlib.import_module(module)
 
-        c =getattr(sys.modules[module], name)
+        c = getattr(sys.modules[module], name)
         if issubclass(c, LoadBase):
             cls.process_classes[name] = c
