@@ -1,19 +1,9 @@
 from sqlalchemy import Table, MetaData, Column, Integer, String, Date, ForeignKey, DateTime, Boolean, Enum, PickleType
 from sqlalchemy.orm import mapper, relationship
-
-from dal import model
+from dal.model import JobStatus, Job
 
 
 metadata = MetaData()
-
-
-class JobStatus(Enum):
-    NEW: 0
-    PLANNED: 1
-    SCHEDULED: 2
-    RUNNING: 3
-    FINISHED: 4
-    FAILED: 9
 
 
 jobs = Table('Jobs', metadata,
@@ -28,4 +18,4 @@ jobs = Table('Jobs', metadata,
 
 
 def start_mappers():
-    jobs_mapper = mapper(model.Job, jobs)
+    jobs_mapper = mapper(Job, jobs)

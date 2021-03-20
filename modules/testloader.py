@@ -1,4 +1,4 @@
-from loadbase import LoadBase
+from loader.loadbase import LoadBase
 from datetime import datetime
 
 class TestLoader(LoadBase):
